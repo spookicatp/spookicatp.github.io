@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Dosis', sans-serif;
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .banner {
+      width: 100%;
+      padding: 20px;
+      color: white;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-bottom: 1px solid #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 2px solid rgba(255,255,255,0.75);
+      animation: typing 1.5s steps(11, end), blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 11ch }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .center-box {
+      background-color: #1a1a1a;
+      border-radius: 20px;
+      padding: 40px 60px;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 40px;
+      opacity: 0;
+      transform: translateX(-100px) rotate(15deg) translateY(5px);
+      animation: slideInLogo 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    }
+
+    @keyframes slideInLogo {
+      to {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg) translateY(5px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="dsc.png" alt="Logo" class="logo">
+    <span class="typing">@sp0okicat</span>
+  </div>
+  <div class="center-box">Portfolio</div>
+</body>
+</html>
